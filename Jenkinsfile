@@ -7,11 +7,5 @@ pipeline {
       }
     }
 
-    stage('build') {
-      steps {
-        sh 'clean compile'
-      }
-    }
-
   }
 }
