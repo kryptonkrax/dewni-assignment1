@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('tools') {
+      steps {
+        sh 'java -version'
+      }
+    }
+
   }
 }
