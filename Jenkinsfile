@@ -14,7 +14,7 @@ pipeline {
             git 'https://github.com/kryptonkrax/dewni-assignment1.git'
             sh 'mvn clean install'
             app = docker.build("dewnisubasinghe/dewni-assignment1")
-            docker.withRegistry( "https://registry.hub.docker.com", "dockerhub" ) {
+            docker.withRegistry( "https://registry.hub.docker.com", "dewnisubasinghe" ) {
               // dockerImage.push()
               app.push("latest")
             }
