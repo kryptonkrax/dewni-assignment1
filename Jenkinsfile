@@ -1,11 +1,11 @@
 pipeline {
-agent any
-stages {
+  agent any
+  stages {
     stage('Checking pom') {
       steps {
         fileExists 'pom.xml'
       }
-    }  
+    }
 
     stage('Build') {
       steps {
