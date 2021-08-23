@@ -7,7 +7,8 @@ pipeline {
       }
     }
 
-    stage('Build'){
+    stage('Build')
+    {
     steps{
         dir('app'){
             script{
