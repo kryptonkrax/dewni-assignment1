@@ -32,7 +32,7 @@ stages {
     stage('Orchestrate') {
       steps {
         script {
-          sh 'kubectl apply -f demo.yaml'
+          sh 'kubectl apply -f docker-k8s-demp.yaml'
         }
 
       }
