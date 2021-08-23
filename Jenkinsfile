@@ -18,24 +18,23 @@ pipeline {
               // dockerImage.push()
               app.push("latest")
             }
+
           }
 
         }
-
       }
-    //}
 
-    stage('Orchestrate') {
-      steps {
-        script {
-          sh 'kubectl apply -f docker-k8s-demp.yaml'
+      stage('Orchestrate') {
+        steps {
+          script {
+            sh 'kubectl apply -f docker-k8s-demp.yaml'
+          }
+
         }
-
       }
-    }
 
+    }
+    tools {
+      jdk 'JAVA 8'
+    }
   }
-  tools {
-    jdk 'JAVA 8'
-  }
-}
