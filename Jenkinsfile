@@ -1,8 +1,5 @@
 pipeline {
   agent any
-  tools{
-    jdk "JAVA 8"
-  }
   stages {
     stage('Checking pom') {
       steps {
@@ -37,5 +34,8 @@ pipeline {
       }
     }
 
+  }
+  tools {
+    jdk 'JAVA 8'
   }
 }
