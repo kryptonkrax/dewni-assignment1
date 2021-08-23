@@ -1,15 +1,13 @@
 pipeline {
-  agent any
-  stages {
-    stage('checking pom') {
-      steps {
+agent any
+stages {
+stage('checking pom') {
+  steps {
         fileExists 'pom.xml'
       }
     }
-
-    stage('Build')
-    {
-    steps{
+stage('Build'){
+   steps{
         dir('app'){
             script{
                 git 'https://github.com/kryptonkrax/dewni-assignment1.git'
