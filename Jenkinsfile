@@ -11,7 +11,7 @@ pipeline {
       steps {
         dir(path: 'app') {
           script {
-            git 'https://github.com/kryptonkrax/dewni-assignment1.git'
+            sh 'https://github.com/kryptonkrax/dewni-assignment1.git'
             bat 'mvn clean install'
             app = docker.build("dewnisubasinghe/dewni-assignment1")
             docker.withRegistry( "https://registry.hub.docker.com", "dockerhub" ) {
